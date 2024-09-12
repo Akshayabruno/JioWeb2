@@ -1,0 +1,906 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-style: normal;
+  src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0");
+  src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0")
+      format("embedded-opentype"),
+    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0")
+      format("woff2"),
+    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0")
+      format("woff"),
+    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0")
+      format("truetype"),
+    url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular")
+      format("svg");
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, hr, p, figure {
+    display: block;
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0;
+    border-width: 0;
+    opacity: 1;
+}
+
+ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: block;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+    align-items: normal;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-header {
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.sticking {
+    margin: 0 !important;
+    z-index: 10000 !important;
+}
+
+@media (max-width: 99999px) {
+    .max\:show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .xxxl\:show {
+        display: none;
+    }
+
+    .xxl\:show {
+        display: none;
+    }
+
+    .xl\:show {
+        display: none;
+    }
+
+    .lg\:show {
+        display: none;
+    }
+
+    .md\:show {
+        display: none;
+    }
+
+    .sm\:show {
+        display: none;
+    }
+
+    .xs\:show {
+        display: none;
+    }
+
+    .xxs\:show {
+        display: none;
+    }
+
+    .tn\:show {
+        display: none;
+    }
+
+    .max\:hide {
+        display: none;
+    }
+}
+
+@media (max-width: 2999px) {
+    .xxxl\:show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .xxxl\:hide {
+        display: none;
+    }
+}
+
+@media (max-width: 1919px) {
+    .xxl\:show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .xxl\:hide {
+        display: none;
+    }
+}
+
+@media (max-width: 1399px) {
+    .xl\:show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .xl\:hide {
+        display: none;
+    }
+}
+
+@media (max-width: 1199px) {
+    .lg\:show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lg\:hide {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .md\:show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .md\:hide {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .sm\:show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sm\:hide {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .xs\:show {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .xs\:hide {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .xxs\:show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .xxs\:hide {
+        display: none;
+    }
+}
+
+@media (max-width: 384px) {
+    .tn\:show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tn\:hide {
+        display: none;
+    }
+}
+
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+.headroom {
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    will-change: transform;
+    transition: transform 200ms linear;
+}
+
+.headroom--pinned {
+    transform: translateY(0%);
+}
+
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+
+.untitled-page.footerSection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+  }
+  .untitled-page .footerGridLayout {
+    position: relative;
+    display: grid;
+    align-content: start;
+    margin: 946px 0 0;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  @media (min-width: 3000px) and (max-width: 99999px) {
+    .untitled-page .footerGridLayout {
+      gap: 0 0;
+    }
+  }
+  @media (max-width: 2999px) {
+    .untitled-page .footerGridLayout {
+      gap: 0 0;
+    }
+  }
+  .untitled-page .footerItemContainer {
+    display: flex;
+    flex-direction: column;
+    grid-row: span 1;
+    grid-column: span 1;
+    background-color: #b42318;
+  }
+  .untitled-page .footerFlexRowContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 10px;
+    margin: 18px auto 17px;
+    width: 95.78%;
+  }
+  .untitled-page .footerImageIcon {
+    width: 154px;
+    min-width: 0;
+  }
+  .untitled-page .footerFlexLayoutContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 10px;
+    width: 453px;
+    min-width: 0;
+  }
+  .untitled-page .footerTermsAndPoliciesContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 10px;
+    width: 190px;
+    min-width: 0;
+  }
+  .untitled-page .footerTermsConditionsText {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 0;
+    font: 600 16px/1.5 Roboto, Helvetica, Arial, serif;
+    color: white;
+    text-align: right;
+  }
+  .untitled-page .footerPrivacyPolicyText {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 0;
+    font: 600 16px/1.5 Roboto, Helvetica, Arial, serif;
+    color: white;
+    text-align: right;
+  }
+  .untitled-page .footerRefundPolicyText {
+    min-width: 0;
+    font: 600 16px/1.5 Roboto, Helvetica, Arial, serif;
+    color: white;
+    letter-spacing: -0.1px;
+  }
+  .untitled-page .footerGridLayoutSecondary {
+    position: absolute;
+    right: 0;
+    bottom: 946px;
+    left: 0;
+    display: grid;
+    align-content: start;
+    margin: 0 auto;
+    width: 100%;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  @media (min-width: 3000px) and (max-width: 99999px) {
+    .untitled-page .footerGridLayoutSecondary {
+      gap: 0 0;
+    }
+  }
+  @media (max-width: 2999px) {
+    .untitled-page .footerGridLayoutSecondary {
+      gap: 0 0;
+    }
+  }
+  .untitled-page .footerGridItemContainer {
+    grid-row: span 1;
+    grid-column: span 1;
+    min-height: 72px;
+    background-color: #b42318;
+  }
+  .untitled-page .footerGridLayoutPrimary {
+    position: absolute;
+    inset: 21px 2.08% 967px auto;
+    display: grid;
+    align-content: start;
+    width: 666px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  @media (min-width: 3000px) and (max-width: 99999px) {
+    .untitled-page .footerGridLayoutPrimary {
+      gap: 0 0;
+    }
+  }
+  @media (max-width: 2999px) {
+    .untitled-page .footerGridLayoutPrimary {
+      gap: 0 0;
+    }
+  }
+  .untitled-page .contactPhoneEmailContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 10px;
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+  .untitled-page .contactPhoneInfoContainer {
+    display: flex;
+    gap: 0 17px;
+    width: 161px;
+    min-width: 0;
+  }
+  .untitled-page .contactPhoneIcon {
+    width: 30px;
+    min-width: 0;
+  }
+  .untitled-page .contactPhoneHighlightText {
+    margin: 3px 0;
+    min-width: 0;
+    font: 600 16px/1.5 Roboto, Helvetica, Arial, serif;
+    color: white;
+  }
+  .untitled-page .contactEmailInfoContainer {
+    display: flex;
+    gap: 0 17px;
+    width: 270px;
+    min-width: 0;
+  }
+  .untitled-page .contactEmailIcon {
+    width: 30px;
+    min-width: 0;
+  }
+  .untitled-page .contactEmailHighlightText {
+    margin: 3px 0;
+    min-width: 0;
+    font: 600 16px/1.5 Roboto, Helvetica, Arial, serif;
+    color: white;
+  }
+  .untitled-page .contactWhatsAppInfoContainer {
+    display: flex;
+    gap: 0 17px;
+    width: 144px;
+    min-width: 0;
+  }
+  .untitled-page .contactWhatsAppIcon {
+    width: 30px;
+    min-width: 0;
+  }
+  .untitled-page .contactWhatsAppHighlightText {
+    margin: 3px 0;
+    min-width: 0;
+    font: 600 16px/1.5 Roboto, Helvetica, Arial, serif;
+    color: white;
+  }
+  .untitled-page .contactIconImage {
+    position: absolute;
+    top: 18px;
+    left: 40px;
+    width: 154px;
+  }
+  .untitled-page .gridLayoutMain {
+    position: absolute;
+    inset: 136px 0 786px;
+    display: grid;
+    align-content: start;
+    margin: 0 auto;
+    width: 711px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  @media (min-width: 3000px) and (max-width: 99999px) {
+    .untitled-page .gridLayoutMain {
+      gap: 0 0;
+    }
+  }
+  @media (max-width: 2999px) {
+    .untitled-page .gridLayoutMain {
+      gap: 0 0;
+    }
+  }
+  .untitled-page .gridContainer {
+    display: grid;
+    align-content: start;
+    grid-row: span 1;
+    grid-column: span 1;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  @media (min-width: 3000px) and (max-width: 99999px) {
+    .untitled-page .gridContainer {
+      gap: 0 0;
+    }
+  }
+  @media (max-width: 2999px) {
+    .untitled-page .gridContainer {
+      gap: 0 0;
+    }
+  }
+  .untitled-page .admissionsTitle_box {
+    display: flex;
+    justify-content: center;
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+  .untitled-page .admissionsTitle {
+    font: 700 80px/1.2 Roboto, Helvetica, Arial, serif;
+    color: black;
+    text-align: center;
+  }
+  .untitled-page .admissionsTitle_span0 {
+    font: 700 1em/1.2 Roboto, Helvetica, Arial, serif;
+    color: #b42318;
+  }
+  .untitled-page .admissionsTitle_span1 {
+    font: 700 1em/1.2 Roboto, Helvetica, Arial, serif;
+  }
+  .untitled-page .admissionsTitle_span2 {
+    font: 700 1em/1.2 Roboto, Helvetica, Arial, serif;
+    color: #b42318;
+  }
+  .untitled-page .flex_col {
+    position: absolute;
+    inset: 275px 0 135px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 812px;
+  }
+  .untitled-page .flex_col1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .untitled-page .flex_col2 {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .untitled-page .group {
+    display: flex;
+    flex-direction: column;
+    width: 812px;
+    height: 608px;
+  }
+  .untitled-page .gridItemsList {
+    display: grid;
+    align-content: start;
+    min-width: 0;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  @media (min-width: 3000px) and (max-width: 99999px) {
+    .untitled-page .gridItemsList {
+      gap: 0 0;
+    }
+  }
+  @media (max-width: 2999px) {
+    .untitled-page .gridItemsList {
+      gap: 0 0;
+    }
+  }
+  .untitled-page .gridItem {
+    display: flex;
+    flex-direction: column;
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+  .untitled-page .gridColumn1 {
+    display: grid;
+    align-content: start;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  @media (min-width: 3000px) and (max-width: 99999px) {
+    .untitled-page .gridColumn1 {
+      gap: 0 0;
+    }
+  }
+  @media (max-width: 2999px) {
+    .untitled-page .gridColumn1 {
+      gap: 0 0;
+    }
+  }
+  .untitled-page .item1Container {
+    display: flex;
+    gap: 0 20px;
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+  .untitled-page .admissionsInfoContainer {
+    display: flex;
+    flex-direction: column;
+    width: 396px;
+    min-width: 0;
+    background-color: white;
+    border-radius: 25px;
+    outline: 1px solid black;
+    outline-offset: -1px;
+    box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+  .untitled-page .flexColumnInfoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 14px 0;
+    margin: 23px 25px 28px;
+  }
+  .untitled-page .admissionsImage {
+    width: 100%;
+  }
+  .untitled-page .flexColumnAdmissionsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 23px 0;
+  }
+  .untitled-page .flexColumnAdmissionsLabelContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 14px 0;
+  }
+  .untitled-page .admissionsLabel {
+    display: flex;
+    flex-direction: column;
+    width: 96px;
+    background-color: #4c67c6;
+  }
+  .untitled-page .admissionsLabelText {
+    margin: 4px 15px 4px 4px;
+    font: 500 12px/1.16 Inter, Helvetica, Arial, serif;
+    color: white;
+  }
+  .untitled-page .indianApplicantsSubtitle {
+    display: flex;
+    flex-direction: column;
+    gap: 9px 0;
+  }
+  .untitled-page .subtitleIndianApplicants {
+    font: 500 20px/1.14 Inter, Helvetica, Arial, serif;
+    color: black;
+  }
+  .untitled-page .indianApplicantDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+  }
+  .untitled-page .indianApplicantInfoText {
+    font: 500 11px/1.36 Inter, Helvetica, Arial, serif;
+    color: black;
+    text-align: justify;
+  }
+  .untitled-page .flexColumnIndianProgramContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 32px 0;
+  }
+  .untitled-page .indianApplicantDescription {
+    font: 400 12px/1.5 Inter, Helvetica, Arial, serif;
+    color: black;
+    text-align: justify;
+  }
+  .untitled-page .programFlexColumnContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 14px 0;
+    width: 86.71%;
+  }
+  .untitled-page .programInfoRowAI {
+    display: flex;
+    gap: 0 9px;
+  }
+  .untitled-page .programImageAI {
+    margin: 2px 0 1px;
+    width: 13px;
+    min-width: 0;
+  }
+  .untitled-page .programNameAI {
+    min-width: 0;
+    font: 400 12px/1.25 Inter, Helvetica, Arial, serif;
+    color: black;
+    text-align: justify;
+  }
+  .untitled-page .programInfoRowMarketing {
+    display: flex;
+    gap: 0 9px;
+  }
+  .untitled-page .programImageMarketing {
+    margin: 2px 0 1px;
+    width: 13px;
+    min-width: 0;
+  }
+  .untitled-page .programNameMarketing {
+    min-width: 0;
+    font: 400 12px/1.25 Inter, Helvetica, Arial, serif;
+    color: black;
+    text-align: justify;
+    letter-spacing: -0.1px;
+  }
+  .untitled-page .programInfoRowSports {
+    display: flex;
+    gap: 0 9px;
+  }
+  .untitled-page .programImageSports {
+    margin: 2px 0 1px;
+    width: 13px;
+    min-width: 0;
+  }
+  .untitled-page .programNameSports {
+    min-width: 0;
+    font: 400 12px/1.25 Inter, Helvetica, Arial, serif;
+    color: black;
+    text-align: justify;
+  }
+  .untitled-page .applyNowButton {
+    display: flex;
+    justify-content: center;
+    width: 122px;
+    max-width: 100%;
+    font: 700 12px/1.16 Inter, Helvetica, Arial, serif;
+    color: white;
+    text-align: center;
+    background-color: #b42318;
+    border-radius: 18.5px;
+    padding: 11.5px 24px;
+  }
+  .untitled-page .internationalAdmissionsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 396px;
+    min-width: 0;
+    background-color: white;
+    border-radius: 25px;
+    outline: 1px solid black;
+    outline-offset: -1px;
+    box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+  .untitled-page .flexColumnInternationalInfoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 14px 0;
+    margin: 23px 25px 28px;
+  }
+  .untitled-page .internationalAdmissionsImage {
+    width: 100%;
+  }
+  .untitled-page .flexColumnInternationalContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 23px 0;
+  }
+  .untitled-page .flexColumnInternationalLabelContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 14px 0;
+  }
+  .untitled-page .internationalAdmissionsLabel {
+    display: flex;
+    flex-direction: column;
+    width: 96px;
+    background-color: #4c67c6;
+  }
+  .untitled-page .internationalAdmissionsLabelText {
+    margin: 4px 15px 4px 4px;
+    font: 500 12px/1.16 Inter, Helvetica, Arial, serif;
+    color: white;
+  }
+  .untitled-page .internationalApplicantsSubtitle {
+    display: flex;
+    flex-direction: column;
+    gap: 9px 0;
+  }
+  .untitled-page .subtitleInternationalApplicants {
+    font: 500 20px/1.14 Inter, Helvetica, Arial, serif;
+    color: black;
+  }
+  .untitled-page .internationalApplicantDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+  }
+  .untitled-page .internationalApplicantInfoText {
+    font: 500 11px/1.36 Inter, Helvetica, Arial, serif;
+    color: black;
+    text-align: justify;
+  }
+  .untitled-page .flexColumnInternationalProgramContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 32px 0;
+  }
+  .untitled-page .internationalApplicantDescription {
+    font: 400 12px/1.5 Inter, Helvetica, Arial, serif;
+    color: black;
+    text-align: justify;
+  }
+  .untitled-page .intProgramFlexContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 14px 0;
+    width: 86.71%;
+  }
+  .untitled-page .intProgramInfoRowAI {
+    display: flex;
+    gap: 0 9px;
+  }
+  .untitled-page .intProgramImageAI {
+    margin: 2px 0 1px;
+    width: 13px;
+    min-width: 0;
+  }
+  .untitled-page .intProgramNameAI {
+    min-width: 0;
+    font: 400 12px/1.25 Inter, Helvetica, Arial, serif;
+    color: black;
+    text-align: justify;
+  }
+  .untitled-page .intProgramInfoRowMarketing {
+    display: flex;
+    gap: 0 9px;
+  }
+  .untitled-page .intProgramImageMarketing {
+    margin: 2px 0 1px;
+    width: 13px;
+    min-width: 0;
+  }
+  .untitled-page .intProgramNameMarketing {
+    min-width: 0;
+    font: 400 12px/1.25 Inter, Helvetica, Arial, serif;
+    color: black;
+    text-align: justify;
+    letter-spacing: -0.1px;
+  }
+  .untitled-page .intProgramInfoRowSports {
+    display: flex;
+    gap: 0 9px;
+  }
+  .untitled-page .intProgramImageSports {
+    margin: 2px 0 1px;
+    width: 13px;
+    min-width: 0;
+  }
+  .untitled-page .intProgramNameSports {
+    min-width: 0;
+    font: 400 12px/1.25 Inter, Helvetica, Arial, serif;
+    color: black;
+    text-align: justify;
+  }
+  .untitled-page .applyNowButtonInternational {
+    display: flex;
+    justify-content: center;
+    width: 122px;
+    max-width: 100%;
+    font: 700 12px/1.16 Inter, Helvetica, Arial, serif;
+    color: white;
+    text-align: center;
+    background-color: #b42318;
+    border-radius: 18.5px;
+    padding: 11.5px 24px;
+  }
+
+.hover-container:hover .indianApplicantDescription,
+.hover-container:hover .indianApplicantInfoText,
+.hover-container:hover .subtitleIndianApplicants,
+.hover-container:hover .programNameAI,
+.hover-container:hover .programNameMarketing,
+.hover-container:hover .programNameSports,
+.hover-container:hover .subtitleInternationalApplicants,
+.hover-container:hover .internationalApplicantInfoText,
+.hover-container:hover .internationalApplicantDescription,
+.hover-container:hover .intProgramNameAI,
+.hover-container:hover .intProgramNameMarketing,
+.hover-container:hover .intProgramNameSports
+{
+    color: white; /* Change text color to white on hover */
+}
+
+.admissionsInfoContainer:hover,
+.internationalAdmissionsContainer:hover
+ {
+    background-color: #b42318; /* Change background color on hover */
+}
+
+.hover-container {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: black; /* Default text color */
+}
+
+.hover-container:hover .info {
+    color: #b42318 !important; /* Change to red on hover with !important */
+}
+
+.hover-container:hover .applyNowButton,
+.hover-container:hover .applyNowButtonInternational
+ {
+    background-color: white; /* Change background color to white on hover */
+    color: #b42318; /* Change text color to #b42318 on hover */
+}
+
+.hover-container:hover .rect2 {
+    background-color: #ffffff; /* Change to white on hover */
+}
