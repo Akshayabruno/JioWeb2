@@ -904,3 +904,7 @@ code {
 .hover-container:hover .rect2 {
     background-color: #ffffff; /* Change to white on hover */
 }
+
+.links{
+  text-decoration: none;
+}
