@@ -508,7 +508,7 @@ code {
   .untitled-page .admissionsTitle_box {
    display: flex;
     justify-content: center;
-    margin: 0 800px 0 0;
+    margin: 0 0 0 480px;
     width: 711px;
     height: 96px;
   }
