@@ -506,12 +506,14 @@ code {
     }
   }
   .untitled-page .admissionsTitle_box {
-   display: flex;
-    justify-content: center;
-    margin: 0 800px 0 0;
-    width: 711px;
-    height: 96px;
-  }
+  display: flex;
+  justify-content: center;
+  grid-row: span 1;
+  grid-column: span 1;
+  margin: 0 0 0 480px; /* Increase left margin to move further right */
+  width: 711px;
+  height: 96px
+}
   .untitled-page .admissionsTitle {
     font: 700 80px/1.2 Roboto, Helvetica, Arial, serif;
     color: black;
