@@ -510,7 +510,7 @@ code {
   justify-content: center;
   grid-row: span 1;
   grid-column: span 1;
-  margin: 0 0 0 480px; /* Increase left margin to move further right */
+  margin: 0 0 0 520px; /* Increase left margin to move further right */
   width: 711px;
   height: 96px
 }
