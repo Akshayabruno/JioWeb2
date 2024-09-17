@@ -510,7 +510,7 @@ code {
   justify-content: center;
   grid-row: span 1;
   grid-column: span 1;
-  margin: 0 0 0 520px; /* Increase left margin to move further right */
+  margin: 0 520px 0 0 ; /* Increase left margin to move further right */
   width: 711px;
   height: 96px
 }
@@ -729,17 +729,20 @@ code {
     border-radius: 18.5px;
     padding: 11.5px 24px;
   }
-  .untitled-page .internationalAdmissionsContainer {
-    display: flex;
-    flex-direction: column;
-    width: 396px;
-    min-width: 0;
-    background-color: white;
-    border-radius: 25px;
-    outline: 1px solid black;
-    outline-offset: -1px;
-    box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  }
+.untitled-page .internationalAdmissionsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 396px;
+  height: 608px;
+  background-color: white;
+  border-radius: 25px;
+  outline: 1px solid black;
+  outline-offset: -1px;
+  box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  margin: 0 0 0 700px; /* Move only the International Applicants container right */
+  grid-column: 2 / 3; /* International Applicants in second column */
+  margin-left: 5px; /* Adjust as needed for spacing */
+}
   .untitled-page .flexColumnInternationalInfoContainer {
     display: flex;
     flex-direction: column;
