@@ -1,302 +1,390 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admissions at Jio Institute</title>
 
-    <meta charset="utf-8" />
+    <!-- Meta Tags for SEO -->
+    <meta name="keywords" content="online application form">
+    <meta name="description" content="Online Admission Process - Check the application process, criteria, eligibility, fees & scholarships and more at Jio Institute.">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Favicon -->
+    <link rel="icon" href="https://static.npfs.co/accounts/728/config/60a26c4106b69006647815_Untitled.png" type="image/x-icon">
+    <link rel="shortcut icon" href="https://static.npfs.co/accounts/728/config/60a26c4106b69006647815_Untitled.png" type="image/x-icon">
 
+    <!-- Prefetch DNS for External Assets -->
+    <link rel="dns-prefetch" href="//cdn.npfs.co">
+    <link rel="dns-prefetch" href="//google-analytics.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.googleadservices.com">
+    <link rel="dns-prefetch" href="//connect.facebook.net">
+    <link rel="dns-prefetch" href="//www.facebook.com">
+    <link rel="dns-prefetch" href="//www.google.com">
 
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
-    <link rel="stylesheet" type="text/css" href="./common.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="./css/fonts.css" />
-    <link rel="stylesheet" type="text/css" href="./css/UntitledPage.css" /> -->
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdn.npfs.co/css/form.css">
+    <link rel="stylesheet" href="https://cdn.npfs.co/uploads/template/728/2739/publish/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.npfs.co/uploads/template/728/2739/publish/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdn.npfs.co/uploads/template/728/2739/publish/css/slider.css">
+    <link rel="stylesheet" href="https://cdn.npfs.co/uploads/template/728/2739/publish/css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.npfs.co/uploads/template/728/2739/publish/css/accordian css.css">
+    <link rel="stylesheet" href="https://cdn.npfs.co/uploads/template/728/2739/publish/css/Timer.css">
+    <link rel="stylesheet" href="https://cdn.npfs.co/css/custom.css">
 
+    <!-- Custom Styles for Image Hover Effect and Responsiveness -->
+    <style>
+        .image-container-wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin-top: 20px;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        }
 
+        .image-container {
+            width: 48%;
+            position: relative;
+            margin-bottom: 20px; /* Space between rows on smaller screens */
+        }
 
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            transition: opacity 0.5s ease;
+        }
 
+        .image-container:hover .default-image {
+            opacity: 0;
+        }
+
+        .image-container:hover .hover-image {
+            opacity: 1;
+        }
+
+        .hover-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            border-radius: 15px;
+        }
+
+        .admissions-open-container {
+            text-align: center;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        .admissions-open-container h1 {
+            font-size: 70px;
+            font-weight: 700;
+            font-family: 'Roboto', Helvetica, Arial, serif;
+            color: black;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .admissions-open-container span {
+            color: #b42318;
+        }
+
+        /* Responsive Design for Mobile Devices */
+        @media (max-width: 768px) {
+            .image-container-wrapper {
+                flex-direction: column; /* Stack images vertically on mobile */
+                align-items: center;
+                width: 100%; /* Full width on mobile */
+            }
+
+            .image-container {
+                width: 80%; /* Reduced width for better display on mobile */
+            }
+
+            .admissions-open-container h1 {
+                font-size: 40px; /* Smaller font size for mobile */
+            }
+
+            .desktop-nav-container {
+                display: none; /* Hide desktop nav on mobile */
+            }
+
+            .mobile-nav-container {
+                display: block; /* Show mobile nav */
+            }
+
+            .footer {
+                flex-direction: column; /* Stack footer items vertically */
+                align-items: center;
+                text-align: center;
+            }
+
+            .footer-logo {
+                margin-bottom: 20px; /* Space between logo and links */
+            }
+
+            .footer ul {
+                padding-left: 0; /* Remove default list padding */
+            }
+
+            .footer ul li {
+                display: inline-block;
+                margin: 5px; /* Space between footer links */
+            }
+        }
+
+        @media (max-width: 576px) {
+            .admissions-open-container h1 {
+                font-size: 30px; /* Even smaller font size for extra small screens */
+            }
+
+            .image-container {
+                width: 100%; /* Full width for images on extra small screens */
+            }
+
+            .image-container img {
+                border-radius: 10px; /* Slightly smaller border radius */
+            }
+        }
+    </style>
+
+    <!-- JavaScript Variables -->
+    <script>
+        var name_DL = '';
+        var email_DL = '';
+        var mobile_DL = '';
+        var countryDialCode_DL = '';
+        var phoneNumber_DL = '';
+    </script>
+
+    <!-- Google Tag Manager Scripts -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TPBHXQN');
+    </script>
+
+    <script>
+        var jsVars = {
+            "LayoutName": "592",
+            "CaptchaLink": "/captcha",
+            "FileRemoveLink": "/file-remove",
+            "_csrfToken": "a9256f7b0cf71c3ef91cef69afdd877c7b8dcebf",
+            "FULL_URL": "https://admissions.jioinstitute.edu.in",
+            "BACKEN_DOMAIN": "nopaperforms.io",
+            "LOGOUT_PATH": "https://admissions.jioinstitute.edu.in",
+            "RegisterUrl": "https://admissions.jioinstitute.edu.in/register",
+            "RegisterValidationCheck": "https://admissions.jioinstitute.edu.in/register-validation",
+            "LoginUrl": "https://admissions.jioinstitute.edu.in/login",
+            "LoginWithOtpUrl": "https://admissions.jioinstitute.edu.in/login-with-otp",
+            "ForgotPasswordUrl": "https://admissions.jioinstitute.edu.in/forgot-password",
+            "ForgotPasswordVerifyCode": "https://admissions.jioinstitute.edu.in/verify-code",
+            "ForgotPasswordChange": "https://admissions.jioinstitute.edu.in/change-user-password",
+            "ResendMailUrl": "https://admissions.jioinstitute.edu.in/resend-mail",
+            "PreRegister": "https://admissions.jioinstitute.edu.in/pre-register",
+            "GetTaxonomyLink": "https://admissions.jioinstitute.edu.in/get-children-list",
+            "lpuDynamicFieldDependencyLink": "https://admissions.jioinstitute.edu.in/common/lpu-dynamic-field-dependency",
+            "lpuDynamicFieldValueMappingLink": "https://admissions.jioinstitute.edu.in/common/lpu-dynamic-field-value-mapping",
+            "preRegisterChatUrl": "https://admissions.jioinstitute.edu.in/pre-register-chat",
+            "getTaxonomyChildListLink": "https://admissions.jioinstitute.edu.in/common/getTaxonomyChildList",
+            "GetCareerAreaLink": "https://admissions.jioinstitute.edu.in/common/get-career-area-list",
+            "GetAreaPreferenceLink": "https://admissions.jioinstitute.edu.in/common/get-area-preference-list",
+            "college_id": 728,
+            "studentResendVerificationLink": "https://admissions.jioinstitute.edu.in/resend-verification-link",
+            "isCustomTheme": 1,
+            "auto_trigger": "false",
+            "csrfToken": "a9256f7b0cf71c3ef91cef69afdd877c7b8dcebf",
+            "widgetAutoSave": 1,
+            "maxMobileLength": 10,
+            "internationalMaxMobileLength": 16,
+            "defaultCountryCode": "+91",
+            "enableMobileOTPLogin": 1,
+            "enableEMailOTPLLogin": 1,
+            "dynamicRequest": true,
+            "requestCsrf": "UGRISlRjYU1wOFpsalpUdjE5U3ZYMlVOWVZVOWpYdkNVTitOMDBpNnhnYlc0Tjczak83Tzg5K0MwTGpRYVNxSDEzYlp4aG5tSmc3Um12WFM5LzNNSVMzajFzQVJJT2RhbGlYdk9BPT0="
+        };
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N6C5KB7Q4B"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10877115916"></script>
+    <noscript><img height='1' width='1' src='https://www.facebook.com/tr?id=551863669467309&ev=PageView&noscript=1' /></noscript>
+    <noscript><img height='1' width='1' src='https://px.ads.linkedin.com/collect/?pid=3823660&fmt=gif' /></noscript>
+    <link rel="manifest" href="/manifest.json">
 </head>
 
-<body class="flex-column">
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2MJSG4" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPBHXQN" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T95BV2D" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
 
-    <section class="untitled-page footerSection">
-        <!-- This section contains footer information including contact details and policy links -->
-        <div class="footerGridLayout">
-            <!-- Grid layout for organizing footer items. -->
-            <div class="footerItemContainer">
-                <!-- Container for individual footer items. -->
-                <div class="footerFlexRowContainer">
-                    <!-- Flex container for footer icons and text. -->
-                    <img class="footerImageIcon" src="./assets/0fe4fa78d59f60d1ed6e69da3eeb8310.png" alt="alt text" />
-                    <!-- Icon image in footer. -->
-                    <div class="footerFlexLayoutContainer">
-                        <!-- Flex layout container for policy links. -->
-                        <div class="footerTermsAndPoliciesContainer">
-                            <!-- Container for terms and policies texts. -->
-                            <p class="footerTermsConditionsText">
-                                <!-- Text for terms and conditions link. -->
-                                <a href="https://www.jioinstitute.edu.in/terms-conditions" style="text-decoration: none; color:white;">
-                                T&amp;C
-                                </a>
-                            </p>
-                            <p class="footerPrivacyPolicyText">
-                                <!-- Text for privacy policy link. -->
-                                <a href="https://www.jioinstitute.edu.in/privacy-policy" style="text-decoration: none; color:white;">
-                                Privacy Policy
-                                </a>
-                            </p>
+    <div class="msg_success text-center" style="display:none;"></div>
+    <div class="jio_com">
+        <div class="header-container bg-primary">
+            <div class="container">
+                <div class="sub-header" id="sub-header">
+                    <div class="sub-header-right-list">
+                        <!-- Social Icons can be added here if needed -->
+                    </div>
+                    <div class="clearfix">&nbsp;</div>
+                </div>
+
+                <div class="site-header-wrap1">
+                    <button aria-expanded="false" aria-label="Toggle navigation" class="header-mobile-menu js-nav-toggle" onclick="myBurgerMenu(this)" type="button"></button>
+                    <div class="header-logo">
+                        <div class="header-logo-bg">
+                            <div class="bg-color1" style="background-image: url('https://static.npfs.co/accounts/728/documents/2024/6/12/Capture1.png');"></div>
                         </div>
-                        <p class="footerRefundPolicyText">
-                            <!-- Text for refund and cancellation policy link. -->
-                            <a href="https://www.jioinstitute.edu.in/refund-cancellation-policy-ay-2025-26" style="text-decoration: none; color:white;">
-                            Refund &amp; Cancellation Policy
-                            </a>
-                        </p>
+                    </div>
+                    <!-- Navigation Links -->
+                    <div class="desktop-nav-container d-none d-lg-block">
+                        <div class="d-flex pt-2">
+                            <ul class="nav navbar-nav flex-row justify-content-end align-items-center w-100">
+                                <li>
+                                    <div class="col-12 col-lg-auto my-2">
+                                        <div class="d-flex align-items-center flex-column flex-lg-row list_animate">
+                                            <div class="col-12 col-lg-auto p-0">
+                                                <img alt="phone" src="Phone.svg" />
+                                            </div>
+                                            <div class="col-12 col-lg-auto my-2">
+                                                <span class="font-medium">
+                                                    <a class="text-white" href="tel:1800-889-1100">1800-889-1100</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col-12 col-lg-auto my-2">
+                                        <div class="d-flex align-items-center flex-column flex-lg-row list_animate">
+                                            <div class="col-12 col-lg-auto p-0">
+                                                <img alt="email" src="Email.svg" />
+                                            </div>
+                                            <div class="col-12 col-lg-auto my-2">
+                                                <span class="font-medium">
+                                                    <a class="text-white" href="mailto:admissions@jioinstitute.edu.in">admissions@jioinstitute.edu.in</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- WhatsApp Contact -->
+                                <li>
+                                    <div class="col-12 col-lg-auto my-2">
+                                        <div class="d-flex align-items-center flex-column flex-lg-row list_animate">
+                                            <div class="col-12 col-lg-auto p-0">
+                                                <img alt="location" src="WhatsApp.svg" />
+                                            </div>
+                                            <div class="col-12 col-lg-auto my-2">
+                                                <span class="font-medium">
+                                                    <a href="https://api.whatsapp.com/send/?phone=919324286196&text=Hi&type=phone_number&app_absent=0" class="text-white">WhatsApp</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mobile-nav-container d-block d-lg-none">
+                        <div class="nav-wrapper">
+                            <nav role="navigation">
+                                <div class="nav-toggle"><span class="nav-title">Menu</span></div>
+                                <div class="scrollable-navigation">
+                                    <!-- Mobile Navigation Links can go here -->
+                                </div>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footerGridLayoutSecondary">
-            <!-- Secondary grid layout for organizing footer items. -->
-            <div class="footerGridItemContainer"></div>
-            <!-- Section containing contact details. -->
-        </div>
-        <div class="footerGridLayoutPrimary">
-            <!-- Primary grid layout for contact information. -->
-            <a href="tel:18008891100" target="_blank" class="contactWhatsAppLink" style="text-decoration: none;">
-            <div class="contactPhoneEmailContainer">
-                <!-- Container for contact phone and email details. -->
-                <div class="contactPhoneInfoContainer">
-                    <!-- Information container for phone contact. -->
-                    <img class="contactPhoneIcon" src="./assets/20f93a8039dd0faebb315af9ce807f52.png" alt="alt text" />
-                    <!-- Phone icon image. -->
-                    <p class="contactPhoneHighlightText">
-                        <!-- Highlighted contact phone number. -->
-                        1800-889-1100
-                    </p>
-                </div>
-            </a>
-            <a href="mailto:admissions@jioinstitute.edu.in" target="_blank" class="contactWhatsAppLink" style="text-decoration: none;">
-                <div class="contactEmailInfoContainer">
-                    <!-- Information container for email contact. -->
-                    <img class="contactEmailIcon" src="./assets/8c89f3a0c63e634a3b98c165cddd3be9.png" alt="alt text" />
-                    <!-- Email icon image. -->
-                    <p class="contactEmailHighlightText">
-                        <!-- Highlighted contact email address. -->
-                        admissions@jioinstitute.edu.in
-                    </p>
-                </div>
-            </a>
-            <a href="https://api.whatsapp.com/send/?phone=919324286196&text=Hi&type=phone_number&app_absent=0" target="_blank" class="contactWhatsAppLink" style="text-decoration: none;">
-                <div class="contactWhatsAppInfoContainer">
-                    <!-- Information container for WhatsApp contact. -->
-                    <img class="contactWhatsAppIcon" src="./assets/322ff6a6f9eeb19ec9b58c9c643d73f1.png" alt="alt text" />
-                    <!-- WhatsApp icon image. -->
-                    <p class="contactWhatsAppHighlightText">
-                        <!-- Highlighted WhatsApp contact prompt. -->
-                        WhatsApp Us
-                    </p>
-                </div>
-            </a>
-            </div>
-        </div>
-        <img class="contactIconImage" src="./assets/0fe4fa78d59f60d1ed6e69da3eeb8310.png" alt="alt text" />
-        <!-- General contact icon image. -->
-        <div class="gridLayoutMain">
-            <!-- Main layout grid for content. -->
-            <div class="gridContainer">
-                <!-- Container for grid items. -->
-                <h1 class="admissionsTitle_box">
-                    <!-- Title for the Admissions section. -->
-                    <span class="admissionsTitle">
-              <span class="admissionsTitle_span0">ADMISSIONS</span>
-                    <span class="admissionsTitle_span1"> </span>
-                    <span class="admissionsTitle_span2">OPEN</span>
-                    </span>
-                </h1>
-            </div>
-        </div>
-        <div class="flex_col">
-            <div class="flex_col1">
-                <div class="flex_col2">
-                    <div class="group">
-                        <div class="gridItemsList">
-                            <!-- List of grid items for admissions information. -->
-                            <div class="gridItem">
-                                <!-- Single grid item for admission information. -->
-                                <div class="gridColumn1">
-                                    <!-- First column in the grid item. -->
-                                    <div class="item1Container">
-                                        <a href="https://admissions.jioinstitute.edu.in/application-form" class="hover-container">
-                                        <!-- Container for the first item details. -->
-                                        <div class="admissionsInfoContainer">
-                                            <!-- Container for admissions information. -->
-                                            <div class="flexColumnInfoContainer">
-                                                <!-- Flexbox layout for detailed admission info. -->
-                                                <img class="admissionsImage" src="./assets/57a8969d3df69419d2ef20a34914fd63.svg" alt="alt text" />
-                                                <!-- Image related to admissions. -->
-                                                <div class="flexColumnAdmissionsContainer">
-                                                    <!-- Container for flex layout in admissions section. -->
-                                                    <div class="flexColumnAdmissionsLabelContainer">
-                                                        <!-- Container for labels in admissions. -->
-                                                        <div class="admissionsLabel">
-                                                            <!-- Label for admissions. -->
-                                                            <div class="admissionsLabelText">
-                                                                <!-- Text description for admissions label. -->
-                                                                ADMISSIONS
-                                                            </div>
-                                                        </div>
-                                                        <h3 class="indianApplicantsSubtitle">
-                                                            <!-- Subtitle for Indian applicants. -->
-                                                            <h3 class="subtitleIndianApplicants">
-                                                                <!-- Subtitle for Indian applicants section. -->
-                                                                Indian Applicants
-                                                            </h3>
-                                                            <div class="indianApplicantDetailsContainer">
-                                                                <!-- Container for Indian applicant information. -->
-                                                                <div class="indianApplicantInfoText">
-                                                                    <!-- Text information for Indian applicants. -->
-                                                                    [For Applicants having Indian nationality/passport]
-                                                                </div>
-                                                                <div class="flexColumnIndianProgramContainer">
-                                                                    <!-- Container for Indian program information. -->
-                                                                    <p class="indianApplicantDescription">
-                                                                        <!-- Description for Indian applicant programs. -->
-                                                                        Admissions to Jio Institute’s one year, full-time and residential PGP Class of 2025-26 are now open. Master the New with global faculty, holistic learning, ‘study-abroad’ module, state-of-the-art infrastructure and much more. ‘Apply Now’ to start your applications in:
-                                                                    </p>
-                                                                    <div class="programFlexColumnContainer">
-                                                                        <!-- Flex container for program information. -->
-                                                                        <div class="programInfoRowAI">
-                                                                            <!-- Row for AI program information. -->
-                                                                            <img class="programImageAI" src="./assets/ea83062dd34b3a219e8a54316d8606d8.svg" alt="alt text" />
-                                                                            <!-- Image for AI program. -->
-                                                                            <div class="programNameAI">
-                                                                                <!-- Name label for AI program. -->
-                                                                                PGP in Artificial Intelligence &amp; Data Science
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="programInfoRowMarketing">
-                                                                            <!-- Row for Marketing program information. -->
-                                                                            <img class="programImageMarketing" src="./assets/ea83062dd34b3a219e8a54316d8606d8.svg" alt="alt text" />
-                                                                            <!-- Image for marketing program. -->
-                                                                            <div class="programNameMarketing">
-                                                                                <!-- Name label for marketing program. -->
-                                                                                PGP in Management (specialization in Marketing)
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="programInfoRowSports">
-                                                                            <!-- Row for Sports Management program information. -->
-                                                                            <img class="programImageSports" src="./assets/ea83062dd34b3a219e8a54316d8606d8.svg" alt="alt text" />
-                                                                            <!-- Image for sports management program. -->
-                                                                            <div class="programNameSports">
-                                                                                <!-- Name label for sports management program. -->
-                                                                                PGP in Sports Management
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </h3>
-                                                    </div>
-                                                    <button class="applyNowButton">
-                                                        <!-- Button for initiating application process. -->
-                                                        APPLY NOW
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
+        <div class="header-top-space">&nbsp;</div>
+    </div>
+
+    <div class="main-container full_width">
+        <section class="section-masthead overflow-hidden">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-12 text-white text-right text-sm-left">
+                        <!-- Admission Section Content -->
+                        <div style="display: flex; justify-content: center; flex-direction: column; align-items: center; margin-top: 30px;">
+                            <!-- Admissions Open Section with nowrap to prevent line break -->
+                            <div class="admissions-open-container">
+                                <h1>
+                                    <span>ADMISSIONS</span>
+                                    <span> </span>
+                                    <span>OPEN</span>
+                                </h1>
+                            </div>
+
+                            <!-- Image containers with two images side by side -->
+                            <div class="image-container-wrapper">
+                                <!-- First Image with Hover Effect -->
+                                <div class="image-container">
+                                    <!-- Link wrapping both images -->
+                                    <a href="https://admissions.jioinstitute.edu.in/application-form" target="_blank">
+                                        <!-- Default image -->
+                                        <img src="./Indian 1.svg" alt="Default Image" class="default-image">
+                                        <!-- Hover image -->
+                                        <img src="./Indian 2.svg" alt="Hover Image" class="hover-image">
                                     </a>
-                                    <a href="https://admissions.jioinstitute.edu.in/international" class="hover-container">
-                                        <div class="internationalAdmissionsContainer">
-                                            <!-- Container for international admission information. -->
-                                            <div class="flexColumnInternationalInfoContainer">
-                                                <!-- Flex container for international admission details. -->
-                                                <img class="internationalAdmissionsImage" src="./assets/cad37d5f567e522aceccb15dc55ba5c3.svg" alt="alt text" />
-                                                <!-- Image related to international admissions. -->
-                                                <div class="flexColumnInternationalContainer">
-                                                    <!-- Container for international programs. -->
-                                                    <div class="flexColumnInternationalLabelContainer">
-                                                        <!-- Container for international admission labels. -->
-                                                        <div class="internationalAdmissionsLabel">
-                                                            <!-- Label for international admissions. -->
-                                                            <div class="internationalAdmissionsLabelText">
-                                                                <!-- Text description for international admissions label. -->
-                                                                ADMISSIONS
-                                                            </div>
-                                                        </div>
-                                                        <h3 class="internationalApplicantsSubtitle">
-                                                            <!-- Subtitle for international applicants section. -->
-                                                            <h3 class="subtitleInternationalApplicants">
-                                                                <!-- Subtitle for international applicants section. -->
-                                                                International Applicants
-                                                            </h3>
-                                                            <div class="internationalApplicantDetailsContainer">
-                                                                <!-- Container for international applicant information. -->
-                                                                <div class="internationalApplicantInfoText">
-                                                                    <!-- Text information for international applicants. -->
-                                                                    [For Applicants having nationality/passport other than INDIA]
-                                                                </div>
-                                                                <div class="flexColumnInternationalProgramContainer">
-                                                                    <!-- Container for international program information. -->
-                                                                    <p class="internationalApplicantDescription">
-                                                                        <!-- Description for international applicant programs. -->
-                                                                        Admissions to Jio Institute’s one year, full-time and residential PGP Class of 2025-26 are now open. Master the New with global faculty, holistic learning, ‘study-abroad’ module, state-of-the-art infrastructure and much more. ‘Apply Now’ to start your applications in:
-                                                                    </p>
-                                                                    <div class="intProgramFlexContainer">
-                                                                        <!-- Flex container for international program information. -->
-                                                                        <div class="intProgramInfoRowAI">
-                                                                            <!-- Row for international AI program information. -->
-                                                                            <img class="intProgramImageAI" src="./assets/ea83062dd34b3a219e8a54316d8606d8.svg" alt="alt text" />
-                                                                            <!-- Image for international AI program. -->
-                                                                            <div class="intProgramNameAI">
-                                                                                <!-- Name label for international AI program. -->
-                                                                                PGP in Artificial Intelligence &amp; Data Science
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="intProgramInfoRowMarketing">
-                                                                            <!-- Row for international Marketing program information. -->
-                                                                            <img class="intProgramImageMarketing" src="./assets/ea83062dd34b3a219e8a54316d8606d8.svg" alt="alt text" />
-                                                                            <!-- Image for international marketing program. -->
-                                                                            <div class="intProgramNameMarketing">
-                                                                                <!-- Name label for international marketing program. -->
-                                                                                PGP in Management (specialization in Marketing)
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="intProgramInfoRowSports">
-                                                                            <!-- Row for international Sports Management program information. -->
-                                                                            <img class="intProgramImageSports" src="./assets/ea83062dd34b3a219e8a54316d8606d8.svg" alt="alt text" />
-                                                                            <!-- Image for international sports management program. -->
-                                                                            <div class="intProgramNameSports">
-                                                                                <!-- Name label for international sports management program. -->
-                                                                                PGP in Sports Management
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </h3>
-                                                    </div>
-                                                    <button class="applyNowButtonInternational">
-                                                        <!-- Button for international applicants to apply. -->
-                                                        APPLY NOW
-                                                    </button>
-                                                    
-                                                </div>
-                                            </div>
-                                        </div>
+                                </div>
+
+                                <!-- Second Image with Hover Effect -->
+                                <div class="image-container">
+                                    <!-- Link wrapping both images -->
+                                    <a href="https://admissions.jioinstitute.edu.in/international" target="_blank">
+                                        <!-- Default image -->
+                                        <img src="./international 1.svg" alt="International Default Image" class="default-image">
+                                        <!-- Hover image -->
+                                        <img src="./international 2.svg" alt="International Hover Image" class="hover-image">
                                     </a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-4 col-12">
+                        <!-- Add additional content if needed -->
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
+    <!-- Footer Section -->
+<section style="margin-top: 50px;"> <!-- Added margin-top to push the footer down -->
+    <div class="footer jinst-footer d-flex justify-content-center">
+        <div class="container d-flex flex-column flex-lg-row">
+            <div class="footer-logo d-flex align-items-center">
+                <a href="#"><img src="https://static.npfs.co/accounts/728/documents/2024/6/12/Capture1.png" width="120" alt="" class="img-fluid"></a>
+            </div>
+            <ul class="d-flex flex-wrap mt-3 mt-lg-0 ml-0 ml-lg-auto">
+                <li><a href="https://jioinstitute.edu.in/terms-conditions" target="_blank">T&amp;C</a></li>
+                <li><a href="https://jioinstitute.edu.in/privacy-policy" target="_blank">Privacy Policy</a></li>
+                <li><a href="https://jioinstitute.edu.in/refund-and-cancellation-policy">Refund &amp; Cancellation policy</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
 
 </body>
 
